@@ -67,18 +67,19 @@
 <body>
 
 <div id="container">
-	<h1>Code Igniter</h1>
+	<h1>Pedidos </h1>
 
 	<div id="body">
-		<p> <?php echo $nombre; ?> </p>
-		<code>application/views/welcome_message.php</code>
+		<a href="<?=base_url();?>index.php/users/getUsers/"> Ver Usuarios </a>
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+		<form  id ="form" action="<?=base_url();?>index.php/users/addUser" method="POST">
+			<p> <?php echo $nombre; ?> : Guardar Usuario </p>
+			<p> Nombre: <input name="name" id="name" type="text"> </p> 
+			<p> Apellido: <input name="lastName" id="lastName" type="text"> </p> 
+			<p> e-Mail: <input name="email" id="email" type="text"> </p> 
+			<input type="submit" value="Guardar Usuario" id="save">
+		</form>	
 	</div>
-
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
 

@@ -4,12 +4,12 @@ class Welcome extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this->load->model('usersModels');
+		$this->load->model('usersModel');
 	}
 
 
 	public function index(){
-		$data["nombre"] = "chuy";
+		$data["nombre"] = "Chuy";
 		$this->load->view('welcome_message', $data);
 	}
 }
