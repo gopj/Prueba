@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+
 	<title>Welcome to CodeIgniter</title>
 
-	<style type="text/css">
-
+	<style type="text/css"> 
 	::selection{ background-color: #E13300; color: white; }
 	::moz-selection{ background-color: #E13300; color: white; }
 	::webkit-selection{ background-color: #E13300; color: white; }
@@ -67,18 +67,23 @@
 <body>
 
 <div id="container">
-	<h1>Pedidos </h1>
+	<h1>Publicar Post </h1>
 
 	<div id="body">
-		<a href="<?=base_url();?>index.php/users/getUsers/"> Ver Usuarios </a>
+		<a href="<?=base_url();?>index.php/users/getPosts/"> Ver Posts</a>
 
-		<form  id ="form" action="<?=base_url();?>index.php/users/addUser" method="POST">
-			<p> <?php echo $nombre; ?> : Guardar Usuario </p>
+		<form  id ="form" action="<?=base_url();?>index.php/users/addPosts" method="POST">
+			<p> <?php echo $nombre; ?> : Guardar Posts</p>
 			<p> Nombre: <input name="name" id="name" type="text"> </p> 
-			<p> Apellido: <input name="lastName" id="lastName" type="text"> </p> 
-			<p> e-Mail: <input name="email" id="email" type="text"> </p> 
-			<input type="submit" value="Guardar Usuario" id="save">
-		</form>	
+			<p> Titulo: <input name="lastName" id="title" type="text"> </p> 
+			<!-- <p> Contenido: <input name="cont" id="cont" type="textarea"> </p> 	-->
+			
+			
+			Conternido:
+			<p> <textarea name="cont" id="cont" rows = "3" cols = "80"></textarea> </p>
+			<input type="submit" value="Guardar Post" id="save">
+		</form>
+
 	</div>
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>

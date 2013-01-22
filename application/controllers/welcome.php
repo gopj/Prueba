@@ -17,10 +17,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message', $data);
 	}
 
-	public function index($offset='')
+	/*public function index($offset='')
 	{
 		$this->load->view('vista_mensajes'); // solo cargaremos la vista
-	}
+	}*/
 
 	public function lista($offset='')
 	{
