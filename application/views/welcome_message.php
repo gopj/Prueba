@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Welcome to CodeIgniter</title>
+	<title>Posts</title>
 
 	<style type="text/css"> 
 	::selection{ background-color: #E13300; color: white; }
@@ -70,17 +70,18 @@
 	<h1>Publicar Post </h1>
 
 	<div id="body">
-		<a href="<?=base_url();?>index.php/users/getPosts/"> Ver Posts</a>
+		<a href="<?=base_url();?>index.php/posts/getPost/"> Ver Posts</a>
 
-		<form  id ="form" action="<?=base_url();?>index.php/users/addPosts" method="POST">
+		<form  id ="form" action="<?=base_url();?>index.php/posts/addPost/" method="POST">
 			<p> <?php echo $nombre; ?> : Guardar Posts</p>
 			<p> Nombre: <input name="name" id="name" type="text"> </p> 
-			<p> Titulo: <input name="lastName" id="title" type="text"> </p> 
+			<p> Titulo: <input name="title" id="title" type="text"> </p> 
 			<!-- <p> Contenido: <input name="cont" id="cont" type="textarea"> </p> 	-->
 			
 			
 			Conternido:
 			<p> <textarea name="cont" id="cont" rows = "3" cols = "80"></textarea> </p>
+
 			<input type="submit" value="Guardar Post" id="save">
 		</form>
 

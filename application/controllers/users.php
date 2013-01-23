@@ -8,7 +8,7 @@ class Users extends CI_Controller {
 	}
 
 
-	public function addUser(){
+	public function addPost(){
 
 		$data = array(
 			"name" => $this->input->post('name'),
